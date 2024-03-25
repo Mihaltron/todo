@@ -9,5 +9,5 @@ Route::post('/saveItemRoute', [TodoListController::class, 'saveItem'])->name('sa
 
 Route::post('/complete/{id}', [TodoListController::class, 'complete'])->name('complete');
 
-Route::post('/delete/{id}', [TodoListController::class, 'deleteItem'])->name('del');
+Route::delete('/delete/{id}', [TodoListController::class, 'deleteItem'])->name('del');
 
