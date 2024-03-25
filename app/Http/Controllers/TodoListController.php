@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\listItem;
+use App\Models\ListItem;
 
 class TodoListController extends Controller
 {
@@ -32,7 +32,7 @@ class TodoListController extends Controller
         return redirect('/');
     }
 
-    public function delItem($id)
+    public function deleteItem($id)
     {
         $item = ListItem::findOrFail($id);
 
