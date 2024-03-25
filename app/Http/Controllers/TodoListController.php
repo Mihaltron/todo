@@ -13,11 +13,11 @@ class TodoListController extends Controller
     }
     public function saveItem(Request $request)
     {
-        $newListItem = new listItem;
+        $ListItemModel = new listItem;
 
-        $newListItem->name = $request->listItem;
-        $newListItem->is_complete = false;
-        $newListItem->save();
+        $ListItemModel->name = $request->listItem;
+        $ListItemModel->is_complete = false;
+        $ListItemModel->save();
 
         return redirect('/');
     }
